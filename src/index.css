@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  
+  --bg-dark: #0a0814;
+  --bg-deep: #05040a;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  
+  /* Color Palette - Vibrant HSL */
+  --color-primary: 260, 95%, 68%;    /* Purple-blue */
+  --color-secondary: 320, 85%, 60%;  /* Magenta-pink */
+  --color-accent: 185, 90%, 55%;     /* Cyan-blue */
+  
+  --shadow-glow: 0 0 40px rgba(var(--color-primary), 0.3);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: radial-gradient(circle at 50% 0%, var(--bg-dark), var(--bg-deep));
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+/* Ambient Coloring Lights in the background */
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  width: 50vw;
+  height: 50vw;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.15;
+}
+
+body::before {
+  background: hsla(var(--color-primary), 0.5);
+  top: -10%;
+  left: -10%;
+  animation: floatLight 20s infinite alternate ease-in-out;
+}
+
+body::after {
+  background: hsla(var(--color-secondary), 0.5);
+  bottom: -10%;
+  right: -10%;
+  animation: floatLight 25s infinite alternate-reverse ease-in-out;
+}
+
+@keyframes floatLight {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(80px, 50px) scale(1.2);
+  }
+}
+
+#root {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+
+/* Glow utility classes */
+.glow-text {
+  text-shadow: 0 0 10px hsla(var(--color-primary), 0.5), 0 0 20px hsla(var(--color-primary), 0.3);
+}
+
+.glow-box {
+  box-shadow: 0 0 25px hsla(var(--color-primary), 0.25);
+  border: 1px solid hsla(var(--color-primary), 0.3);
+}
