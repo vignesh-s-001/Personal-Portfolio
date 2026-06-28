@@ -25,6 +25,7 @@
 
 body {
   background: radial-gradient(circle at 50% 0%, var(--bg-dark), var(--bg-deep));
+  background-attachment: fixed;
   color: var(--text-primary);
   font-family: var(--font-body);
   min-height: 100vh;
