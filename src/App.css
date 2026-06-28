@@ -25,6 +25,19 @@ body {
   z-index: 8;
 }
 
+/* Bloody Splatter Texture Overlay */
+.blood-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  mix-blend-mode: screen; /* Screens out the pure black background of the image */
+  opacity: 0.45; /* Semi-transparent so it's a subtle texture */
+}
+
 
 /* ─────────────────────────────────────────────
    FIXED BACKGROUND ELEMENTS
@@ -145,8 +158,7 @@ body {
   flex-direction: column;
   justify-content: center;
   position: relative;
-  /* Solid base so fixed bubbles never show through content */
-  background: var(--bg-dark);
+  background: transparent;
 }
 
 .section-inner {
