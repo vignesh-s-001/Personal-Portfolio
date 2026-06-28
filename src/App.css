@@ -31,10 +31,11 @@ body {
   inset: 0;
   pointer-events: none;
   z-index: 1;
-  background-size: 500px;
-  background-repeat: repeat;
-  mix-blend-mode: screen; /* Screens out the pure black background of the image */
-  opacity: 0.45; /* Semi-transparent so it's a subtle texture */
+  background-size: contain; /* Fits the whole splash without stretching/blurring or repeating */
+  background-position: center;
+  background-repeat: no-repeat;
+  mix-blend-mode: screen; 
+  opacity: 0.6; /* Increased opacity slightly since it's only one splash now */
 }
 
 
