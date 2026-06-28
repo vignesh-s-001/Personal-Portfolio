@@ -1168,6 +1168,30 @@ body {
   .site-footer {
     padding: 30px 20px;
   }
+  
+  /* Timeline (Experience) fixes */
+  .timeline-item {
+    gap: 16px;
+  }
+  .timeline-left {
+    padding-top: 4px;
+  }
+  .timeline-dot {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+  .timeline-card {
+    padding: 20px 20px;
+  }
+  .timeline-card-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .timeline-meta {
+    align-items: flex-start;
+  }
 }
 
 /* Small Mobile */
