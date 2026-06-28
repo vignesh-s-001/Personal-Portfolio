@@ -4,15 +4,15 @@
   --font-heading: 'Outfit', sans-serif;
   --font-body: 'Plus Jakarta Sans', sans-serif;
   
-  --bg-dark: #120505;
-  --bg-deep: #0a0202;
+  --bg-dark: #0a0814;
+  --bg-deep: #05040a;
   --text-primary: #f8fafc;
-  --text-secondary: #e2a6a6;
+  --text-secondary: #94a3b8;
   
-  /* Color Palette - Vibrant HSL (Premium Red Theme) */
-  --color-primary: 0, 100%, 60%;     /* Pure Neon Red */
-  --color-secondary: 345, 100%, 55%; /* Deep Crimson */
-  --color-accent: 10, 100%, 55%;     /* Vibrant Scarlet */
+  /* Color Palette - Vibrant HSL */
+  --color-primary: 260, 95%, 68%;    /* Purple-blue */
+  --color-secondary: 320, 85%, 60%;  /* Magenta-pink */
+  --color-accent: 185, 90%, 55%;     /* Cyan-blue */
   
   --shadow-glow: 0 0 40px rgba(var(--color-primary), 0.3);
 }
