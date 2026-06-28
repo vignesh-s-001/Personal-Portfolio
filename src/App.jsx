@@ -495,14 +495,14 @@ function App() {
                 <div className="about-badges">
                   <span className="badge">🇮🇳 Chennai, Tamil Nadu</span>
                   <span className="badge">🎓 B.E. Computer Science · 8.19 CGPA</span>
-                  <span className="badge">💼 Software Engineer @ Atatus</span>
+                  <span className="badge">💼 Software Engineer (Available for opportunities)</span>
                   <span className="badge">🚀 2023 Graduate</span>
                 </div>
               </div>
               <div className="about-text-col">
                 <h3 className="about-sub">Building products that scale. Solving problems that matter.</h3>
                 <p>
-                  I'm a Software Engineer with 1+ year of professional experience, currently at <em>Atatus</em> — where I build and maintain scalable SaaS products including an <em>Observability Platform</em> and a <em>GRC (Governance, Risk & Compliance)</em> platform. I've worked across backend services (Node.js, Go), real-time data pipelines (ClickHouse, Redis), and cloud integrations (AWS & Azure).
+                  I'm a Software Engineer with 1+ year of professional experience. Most recently at <em>Atatus</em>, I built and maintained scalable SaaS products including an <em>Observability Platform</em> and a <em>GRC (Governance, Risk & Compliance)</em> platform. I've worked across backend services (Node.js, Go), real-time data pipelines (ClickHouse, Redis), and cloud integrations (AWS & Azure).
                 </p>
                 <p>
                   Beyond Atatus, I've also contributed to multiple products: <em>Lowerplane</em>, <em>Klogic</em>, and <em>MagicDemo</em> — spanning domains from infrastructure observability to business logic automation. I thrive in fast-moving product teams where backend reliability and user-facing quality both matter.
