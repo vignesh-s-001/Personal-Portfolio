@@ -9,10 +9,10 @@
   --text-primary: #f8fafc;
   --text-secondary: #e2a6a6;
   
-  /* Color Palette - Vibrant HSL (Red Theme) */
-  --color-primary: 355, 90%, 62%;    /* Crimson Red */
-  --color-secondary: 15, 95%, 55%;   /* Red-Orange */
-  --color-accent: 45, 100%, 60%;     /* Golden Yellow */
+  /* Color Palette - Vibrant HSL (Premium Red Theme) */
+  --color-primary: 0, 100%, 60%;     /* Pure Neon Red */
+  --color-secondary: 345, 100%, 55%; /* Deep Crimson */
+  --color-accent: 10, 100%, 55%;     /* Vibrant Scarlet */
   
   --shadow-glow: 0 0 40px rgba(var(--color-primary), 0.3);
 }
