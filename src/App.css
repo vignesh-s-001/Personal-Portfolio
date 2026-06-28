@@ -25,19 +25,6 @@ body {
   z-index: 8;
 }
 
-/* Bloody Splatter Texture Overlay */
-.blood-overlay {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
-  background-size: contain; /* Fits the whole splash without stretching/blurring or repeating */
-  background-position: center;
-  background-repeat: no-repeat;
-  mix-blend-mode: screen; 
-  opacity: 0.6; /* Increased opacity slightly since it's only one splash now */
-}
-
 
 /* ─────────────────────────────────────────────
    FIXED BACKGROUND ELEMENTS
@@ -158,7 +145,8 @@ body {
   flex-direction: column;
   justify-content: center;
   position: relative;
-  background: transparent;
+  /* Solid base so fixed bubbles never show through content */
+  background: #0a0814;
 }
 
 .section-inner {

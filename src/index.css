@@ -4,15 +4,15 @@
   --font-heading: 'Outfit', sans-serif;
   --font-body: 'Plus Jakarta Sans', sans-serif;
   
-  --bg-dark: #0a0404;
-  --bg-deep: #050202;
+  --bg-dark: #120505;
+  --bg-deep: #0a0202;
   --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
+  --text-secondary: #e2a6a6;
   
-  /* Color Palette - Bloody Red */
-  --color-primary: 355, 95%, 55%;    /* Blood Red */
-  --color-secondary: 350, 100%, 40%; /* Deep Crimson */
-  --color-accent: 10, 100%, 50%;     /* Vibrant Red */
+  /* Color Palette - Vibrant HSL (Red Theme) */
+  --color-primary: 355, 90%, 62%;    /* Crimson Red */
+  --color-secondary: 15, 95%, 55%;   /* Red-Orange */
+  --color-accent: 45, 100%, 60%;     /* Golden Yellow */
   
   --shadow-glow: 0 0 40px rgba(var(--color-primary), 0.3);
 }
@@ -25,7 +25,6 @@
 
 body {
   background: radial-gradient(circle at 50% 0%, var(--bg-dark), var(--bg-deep));
-  background-attachment: fixed;
   color: var(--text-primary);
   font-family: var(--font-body);
   min-height: 100vh;

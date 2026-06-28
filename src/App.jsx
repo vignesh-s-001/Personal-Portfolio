@@ -10,7 +10,6 @@ import gitLogo from './assets/git.png'
 import nodejsLogo from './assets/node js.png'
 import postgresLogo from './assets/postgres.png'
 import mugshotImg from './assets/mugshot.png'
-import bloodBg from './assets/blood.png'
 import './App.css'
 
 gsap.registerPlugin(Draggable)
@@ -402,9 +401,6 @@ function App() {
 
   return (
     <div ref={containerRef} className="site-root">
-      
-      {/* ── Blood Overlay ── */}
-      <div className="blood-overlay" style={{ backgroundImage: `url(${bloodBg})` }} />
 
       {/* ── Fixed Dot Nav ── */}
       <nav className="side-nav" aria-label="Page navigation">
