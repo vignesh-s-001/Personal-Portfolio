@@ -219,7 +219,7 @@ function App() {
       if (!el) return
       const obs = new IntersectionObserver(
         ([entry]) => { if (entry.isIntersecting) setActiveNav(id) },
-        { threshold: 0.4 }
+        { rootMargin: '-30% 0px -50% 0px' }
       )
       obs.observe(el)
       observers.push(obs)
