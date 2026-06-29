@@ -32,7 +32,7 @@ const BUBBLE_POSITIONS = [
   { vx: 75, vy: 80, li: 0 }, { vx: 92, vy: 75, li: 2 },
   { vx: 80, vy: 40, li: 1 }, { vx: 25, vy: 60, li: 3 },
   { vx: 60, vy: 65, li: 4 }, { vx: 45, vy: 30, li: 5 },
-  { vx: 60, vy: 25, li: 6 },  { vx: 95, vy: 15, li: 7 },
+  { vx: 60, vy: 25, li: 6 }, { vx: 95, vy: 15, li: 7 },
 ]
 
 // ── Correct skills from resume ──
@@ -311,7 +311,7 @@ function App() {
         const currentY = gsap.getProperty(el, "y");
         const currentLeft = parseFloat(el.style.left || 0);
         const currentTop = parseFloat(el.style.top || 0);
-        
+
         gsap.set(el, {
           left: currentLeft + currentX,
           top: currentTop + currentY,
@@ -343,10 +343,10 @@ function App() {
         const w = window.innerWidth; const h = window.innerHeight
         const bW = el.offsetWidth || 72; const bH = el.offsetHeight || 72
         const baseLeft = (bubble.vx / 100) * w - bW / 2
-        const baseTop  = (bubble.vy / 100) * h - bH / 2
+        const baseTop = (bubble.vy / 100) * h - bH / 2
         gsap.set(el, { left: baseLeft, top: baseTop, x: 0, y: 0, position: 'absolute' })
         const floatRX = 10 + Math.random() * 14; const floatRY = 10 + Math.random() * 14
-        const durX = 3.5 + Math.random() * 2.5;  const durY = 3.5 + Math.random() * 2.5
+        const durX = 3.5 + Math.random() * 2.5; const durY = 3.5 + Math.random() * 2.5
         const floatX = gsap.to(el, { x: floatRX, duration: durX, repeat: -1, yoyo: true, ease: 'sine.inOut' })
         const floatY = gsap.to(el, { y: floatRY, duration: durY, repeat: -1, yoyo: true, ease: 'sine.inOut' })
         floatY.seek(Math.random() * durY)
@@ -736,6 +736,15 @@ function App() {
                       <p className="contact-link-value">github.com/vignesh-s-001</p>
                     </div>
                   </a>
+                  <a href="https://www.instagram.com/vignesh_____sankar?igsh=MTk5YnM1bHJuNjkydg%3D%3D" target="_blank" rel="noreferrer" className="contact-link" id="contact-instagram">
+                    <div className="contact-link-icon" style={{ background: '#e1306c22', color: '#e1306c' }}>
+                      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </div>
+                    <div>
+                      <p className="contact-link-label">Instagram</p>
+                      <p className="contact-link-value">instagram.com/vignesh_____sankar</p>
+                    </div>
+                  </a>
                 </div>
               </div>
               <div className="contact-form-wrap">
@@ -754,7 +763,7 @@ function App() {
                     </div>
                     <div className="form-group">
                       <label htmlFor="cf-email">Email Address</label>
-                      <input id="cf-email" type="email" name="email" placeholder="john@example.com" value={formState.email} onChange={e => setFormState(s => ({ ...s, email: e.target.value }))} required />
+                      <input id="cf-email" type="email" name="email" placeholder="Hikkigaya@gmail.com" value={formState.email} onChange={e => setFormState(s => ({ ...s, email: e.target.value }))} required />
                     </div>
                     <div className="form-group">
                       <label htmlFor="cf-message">Message</label>
