@@ -908,9 +908,10 @@ body {
   border-radius: 16px;
   margin-bottom: 36px;
 }
-.resume-file-info { display: flex; align-items: center; gap: 18px; }
-.resume-file-icon { font-size: 2.2rem; }
-.resume-file-name { font-weight: 700; color: #fff; font-size: 1rem; }
+.resume-file-info { display: flex; align-items: center; gap: 18px; min-width: 0; }
+.resume-file-info > div { min-width: 0; }
+.resume-file-icon { font-size: 2.2rem; flex-shrink: 0; }
+.resume-file-name { font-weight: 700; color: #fff; font-size: 1rem; word-break: break-word; overflow-wrap: anywhere; }
 .resume-file-meta { font-size: 0.8rem; color: var(--text-secondary); margin-top: 2px; }
 .btn-download {
   padding: 12px 24px;
@@ -1095,9 +1096,9 @@ body {
 /* Tablet & Smaller Devices */
 @media (max-width: 992px) {
   .section-inner {
-    padding: 0 5%;
+    padding: 40px 5%;
   }
-  .about-grid, .resume-grid {
+  .about-grid, .resume-body, .contact-layout {
     grid-template-columns: 1fr;
     gap: 40px;
   }
@@ -1124,6 +1125,16 @@ body {
   .nav-item {
     font-size: 0.8rem;
     padding: 6px 12px;
+  }
+  
+  .resume-download-bar {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .btn-download {
+    width: 100%;
+    text-align: center;
   }
   
   .hero-inner {
