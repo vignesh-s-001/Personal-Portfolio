@@ -81,7 +81,7 @@ const EXPERIENCE_DATA = [
   {
     type: 'work',
     title: 'Software Engineer',
-    org: 'Atatus',
+    org: 'Namlabs',
     period: 'Jul 2025 – May 2026',
     location: 'Chennai, Tamil Nadu',
     desc: 'Contributed to the development of scalable SaaS products, including observability and GRC platforms. Built and maintained backend services and APIs using Node.js and Go. Worked with PostgreSQL, MongoDB, Redis, and ClickHouse to manage large-scale data. Collaborated with cross-functional teams to design features that improved system monitoring and user experience.',
@@ -91,7 +91,7 @@ const EXPERIENCE_DATA = [
   {
     type: 'work',
     title: 'Software Engineer',
-    org: 'Atatus',
+    org: 'Namlabs',
     period: 'May 2024 – Oct 2024',
     location: 'Chennai, Tamil Nadu',
     desc: 'Contributed to backend development and enhancement of an existing SaaS observability platform. Implemented observability features including alerting, forecasting, and anomaly detection. Integrated Azure and AWS Marketplace workflows. Improved authentication mechanisms and implemented Microsoft Teams integrations.',
@@ -122,6 +122,22 @@ const EXPERIENCE_DATA = [
 
 // ── Correct projects from resume ──
 const PROJECTS_DATA = [
+  {
+    id: 'landing-page', title: 'Company Landing page',
+    desc: 'A modern, responsive company landing page built with modern web technologies. Focuses on performance, accessibility, and high conversion rate.',
+    tech: ['React', 'TailwindCSS', 'Vite'],
+    color: '#00a8cc', icon: '🌐',
+    github: 'https://github.com/vignesh-s-001/Landing-Page', category: 'Frontend',
+    live: 'https://technovasolutions-sigma.vercel.app/',
+  },
+  {
+    id: 'employee-dash', title: 'Employee Management Dashboard',
+    desc: 'A comprehensive dashboard for managing employee records, tracking performance, and streamlining HR operations.',
+    tech: ['React', 'Node.js', 'Express', 'MongoDB'],
+    color: '#2496ed', icon: '📊',
+    github: 'https://github.com/vignesh-s-001/Employee-Management-Dashboard', category: 'Full Stack',
+    live: 'https://employee-management-dashboard-phi.vercel.app/',
+  },
   {
     id: 'chat-app', title: 'Real-Time Chat Application',
     desc: 'Built a real-time chat application using the MERN stack with WebSocket-based communication. Implemented real-time messaging using WebSockets for instant message delivery.',
@@ -164,13 +180,6 @@ const PROJECTS_DATA = [
     color: '#336791', icon: '📚',
     github: 'https://github.com/LORDLONELYDEVIL/bm-backend', category: 'Backend',
   },
-  {
-    id: 'employee-dash', title: 'Employee Management Dashboard',
-    desc: 'A comprehensive dashboard for managing employee records, tracking performance, and streamlining HR operations.',
-    tech: ['React', 'Node.js', 'Express', 'MongoDB'],
-    color: '#2496ed', icon: '📊',
-    github: 'https://github.com/vignesh-s-001/Employee-Management-Dashboard', category: 'Full Stack',
-  },
 ]
 
 function scrollToSection(id) {
@@ -190,6 +199,12 @@ function App() {
   const [projectFilter, setProjectFilter] = useState('All')
   const [formState, setFormState] = useState({ name: '', email: '', message: '' })
   const [formSent, setFormSent] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
+  const handleContactSubmit = (e) => {
+    // FormSubmit native action will handle redirection.
+    // We don't prevent default here.
+  };
 
   const logoTypes = useMemo(() => [
     { name: 'python', img: pythonLogo, color: '#3773a3' },
@@ -515,10 +530,10 @@ function App() {
               <div className="about-text-col">
                 <h3 className="about-sub">Building products that scale. Solving problems that matter.</h3>
                 <p>
-                  I'm a Software Engineer with 1+ year of professional experience. Most recently at <em>Atatus</em>, I built and maintained scalable SaaS products including an <em>Observability Platform</em> and a <em>GRC (Governance, Risk & Compliance)</em> platform. I've worked across backend services (Node.js, Go), real-time data pipelines (ClickHouse, Redis), and cloud integrations (AWS & Azure).
+                  I'm a Software Engineer with 1+ year of professional experience. Most recently at <em>Namlabs</em>, I built and maintained scalable SaaS products including an <em>Observability Platform</em> and a <em>GRC (Governance, Risk & Compliance)</em> platform. I've worked across backend services (Node.js, Go), real-time data pipelines (ClickHouse, Redis), and cloud integrations (AWS & Azure).
                 </p>
-                <p>
-                  Beyond Atatus, I've also contributed to multiple products: <em>Lowerplane</em>, <em>Klogic</em>, and <em>MagicDemo</em> — spanning domains from infrastructure observability to business logic automation. I thrive in fast-moving product teams where backend reliability and user-facing quality both matter.
+                <p className="about-desc">
+                  I've also contributed to multiple key products at Namlabs: <em>AtaUs</em>, <em>Klogic</em>, <em>Lowerplane</em>, and <em>MagicDemo</em> — spanning domains from infrastructure observability to business logic automation. I thrive in fast-moving product teams where backend reliability and user-facing quality both matter.
                 </p>
                 <p>
                   I'm a 2023 CS graduate from Anna University (8.19 CGPA). Outside of work, I build personal projects — real-time chat apps, e-commerce platforms, art galleries, UI clones — always learning, always shipping.
@@ -527,7 +542,7 @@ function App() {
                 <div className="worked-on">
                   <p className="worked-on-label">Products I've worked on</p>
                   <div className="worked-on-chips">
-                    <span className="worked-chip">🔭 Atatus Observability</span>
+                    <span className="worked-chip">🔭 Observability</span>
                     <span className="worked-chip">🛡️ GRC</span>
                     <span className="worked-chip">✈️ Lowerplane</span>
                     <span className="worked-chip">📡 Klogic</span>
@@ -756,23 +771,24 @@ function App() {
                     <button className="btn-primary" onClick={() => setFormSent(false)}>Send Another</button>
                   </div>
                 ) : (
-                  <form className="contact-form" onSubmit={e => { e.preventDefault(); setFormSent(true) }}>
+                  <form className="contact-form" action="https://formsubmit.co/vigneshsankar532@gmail.com" method="POST">
+                    <input type="hidden" name="_captcha" value="false" />
+                    <input type="hidden" name="_next" value="https://technovasolutions-sigma.vercel.app/" />
                     <div className="form-group">
                       <label htmlFor="cf-name">Your Name</label>
-                      <input id="cf-name" type="text" name="name" placeholder="Monkey D Luffy" value={formState.name} onChange={e => setFormState(s => ({ ...s, name: e.target.value }))} required />
+                      <input id="cf-name" type="text" name="name" placeholder="Monkey D Luffy" required />
                     </div>
                     <div className="form-group">
                       <label htmlFor="cf-email">Email Address</label>
-                      <input id="cf-email" type="email" name="email" placeholder="Hikkigaya@gmail.com" value={formState.email} onChange={e => setFormState(s => ({ ...s, email: e.target.value }))} required />
+                      <input id="cf-email" type="email" name="email" placeholder="Hikkigaya@gmail.com" required />
                     </div>
                     <div className="form-group">
                       <label htmlFor="cf-message">Message</label>
-                      <textarea id="cf-message" name="message" placeholder="Tell me about your project or opportunity..." rows={5} value={formState.message} onChange={e => setFormState(s => ({ ...s, message: e.target.value }))} required />
+                      <textarea id="cf-message" name="message" placeholder="Tell me about your project or opportunity..." rows={5} required />
                     </div>
-                    <button type="submit" className="btn-primary" id="contact-submit">Send Message ✈️</button>
-                    <p style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.4)', marginTop: '16px', textAlign: 'center' }}>
-                      Note: This contact form is for demonstration and is currently not functional.
-                    </p>
+                    <button type="submit" className="btn-primary" id="contact-submit">
+                      Send Message ✈️
+                    </button>
                   </form>
                 )}
               </div>
@@ -845,7 +861,7 @@ function App() {
                       <div className="resume-exp-header">
                         <strong>Software Engineer</strong><span>Jul 2025 – May 2026</span>
                       </div>
-                      <p className="resume-exp-org">Atatus, Chennai</p>
+                      <p className="resume-exp-org">Namlabs, Chennai</p>
                       <ul className="resume-exp-bullets">
                         <li>Scalable SaaS observability &amp; GRC platform development</li>
                         <li>Backend APIs in Node.js and Go</li>
@@ -856,7 +872,7 @@ function App() {
                       <div className="resume-exp-header">
                         <strong>Software Engineer</strong><span>May 2024 – Oct 2024</span>
                       </div>
-                      <p className="resume-exp-org">Atatus, Chennai</p>
+                      <p className="resume-exp-org">Namlabs, Chennai</p>
                       <ul className="resume-exp-bullets">
                         <li>Alerting, forecasting &amp; anomaly detection features</li>
                         <li>Azure &amp; AWS Marketplace integrations</li>

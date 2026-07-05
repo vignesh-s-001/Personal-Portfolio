@@ -1109,7 +1109,7 @@ body {
     margin: 0 auto;
   }
   .skills-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: 1fr;
   }
   .hero-name {
     font-size: 3.5rem;
