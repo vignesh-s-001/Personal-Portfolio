@@ -201,9 +201,49 @@ function App() {
   const [formSent, setFormSent] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const handleContactSubmit = (e) => {
-    // FormSubmit native action will handle redirection.
-    // We don't prevent default here.
+  const handleContactSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 10000);
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/vigneshsankar532@gmail.com", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formState.name,
+          email: formState.email,
+          message: formState.message,
+          _subject: `Portfolio Contact from ${formState.name}`
+        }),
+        signal: controller.signal
+      });
+
+      clearTimeout(timeoutId);
+      const result = await response.json().catch(() => ({}));
+
+      if (response.ok) {
+        setFormSent(true);
+        setFormState({ name: '', email: '', message: '' });
+      } else {
+        alert(result.message ? `Notice: ${result.message}` : "Oops! Something went wrong.");
+      }
+    } catch (error) {
+      clearTimeout(timeoutId);
+      if (error.name === 'AbortError') {
+        alert("Request timed out. Please check your connection or activate the email.");
+      } else {
+        console.error(error);
+        alert("Oops! Network error occurred.");
+      }
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const logoTypes = useMemo(() => [
@@ -771,23 +811,21 @@ function App() {
                     <button className="btn-primary" onClick={() => setFormSent(false)}>Send Another</button>
                   </div>
                 ) : (
-                  <form className="contact-form" action="https://formsubmit.co/vigneshsankar532@gmail.com" method="POST">
-                    <input type="hidden" name="_captcha" value="false" />
-                    <input type="hidden" name="_next" value="https://technovasolutions-sigma.vercel.app/" />
+                  <form className="contact-form" onSubmit={handleContactSubmit}>
                     <div className="form-group">
                       <label htmlFor="cf-name">Your Name</label>
-                      <input id="cf-name" type="text" name="name" placeholder="Monkey D Luffy" required />
+                      <input id="cf-name" type="text" name="name" placeholder="Monkey D Luffy" value={formState.name} onChange={e => setFormState(s => ({ ...s, name: e.target.value }))} required disabled={isSubmitting} />
                     </div>
                     <div className="form-group">
                       <label htmlFor="cf-email">Email Address</label>
-                      <input id="cf-email" type="email" name="email" placeholder="Hikkigaya@gmail.com" required />
+                      <input id="cf-email" type="email" name="email" placeholder="Hikkigaya@gmail.com" value={formState.email} onChange={e => setFormState(s => ({ ...s, email: e.target.value }))} required disabled={isSubmitting} />
                     </div>
                     <div className="form-group">
                       <label htmlFor="cf-message">Message</label>
-                      <textarea id="cf-message" name="message" placeholder="Tell me about your project or opportunity..." rows={5} required />
+                      <textarea id="cf-message" name="message" placeholder="Tell me about your project or opportunity..." rows={5} value={formState.message} onChange={e => setFormState(s => ({ ...s, message: e.target.value }))} required disabled={isSubmitting} />
                     </div>
-                    <button type="submit" className="btn-primary" id="contact-submit">
-                      Send Message ✈️
+                    <button type="submit" className="btn-primary" id="contact-submit" disabled={isSubmitting}>
+                      {isSubmitting ? 'Sending...' : 'Send Message ✈️'}
                     </button>
                   </form>
                 )}
