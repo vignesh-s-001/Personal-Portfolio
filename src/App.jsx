@@ -123,6 +123,14 @@ const EXPERIENCE_DATA = [
 // ── Correct projects from resume ──
 const PROJECTS_DATA = [
   {
+    id: 'mekark', title: 'Mekark',
+    desc: 'A landing page of a construction company.',
+    tech: ['React', 'TailwindCSS', 'Web Technologies'],
+    color: '#e879f9', icon: '🏗️',
+    github: 'https://github.com/vignesh-s-001/Mekark', category: 'Frontend',
+    live: 'https://mekark.vercel.app',
+  },
+  {
     id: 'landing-page', title: 'Company Landing page',
     desc: 'A modern, responsive company landing page built with modern web technologies. Focuses on performance, accessibility, and high conversion rate.',
     tech: ['React', 'TailwindCSS', 'Vite'],
