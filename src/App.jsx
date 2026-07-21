@@ -124,8 +124,8 @@ const EXPERIENCE_DATA = [
 const PROJECTS_DATA = [
   {
     id: 'mekark', title: 'Mekark',
-    desc: 'A landing page of a construction company.',
-    tech: ['React', 'TailwindCSS', 'Web Technologies'],
+    desc: 'A landing page for a construction company. Features a sleek, responsive design to showcase services, project portfolios, and company expertise, helping to drive client leads.',
+    tech: ['React', 'Next.js', 'TailwindCSS'],
     color: '#e879f9', icon: '🏗️',
     github: 'https://github.com/vignesh-s-001/Mekark', category: 'Frontend',
     live: 'https://mekark.vercel.app',
