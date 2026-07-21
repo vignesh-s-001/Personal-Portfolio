@@ -488,8 +488,8 @@ function App() {
             onClick={() => scrollToSection(item.id)}
             title={item.label}
           >
-            <span className="side-nav__dot" />
             <span className="side-nav__label">{item.label}</span>
+            <span className="side-nav__dot" />
           </button>
         ))}
       </nav>
