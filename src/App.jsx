@@ -123,6 +123,58 @@ const EXPERIENCE_DATA = [
 // ── Correct projects from resume ──
 const PROJECTS_DATA = [
   {
+    id: 'black-scope', title: 'Black-Scope',
+    desc: 'A production-quality frontend observability and monitoring platform built as a Turborepo monorepo.',
+    tech: ['TypeScript', 'Turborepo', 'React'],
+    color: '#00a8cc', icon: '🔭',
+    github: 'https://github.com/vignesh-s-001/Black-Scope', category: 'Full Stack',
+  },
+  {
+    id: 'see-motions', title: 'See-Motions',
+    desc: 'React, Next.js, Framer Motion — Interactive UI components and web animations for modern web applications.',
+    tech: ['TypeScript', 'React', 'Next.js', 'Framer Motion'],
+    color: '#e879f9', icon: '🎬',
+    github: 'https://github.com/vignesh-s-001/See-Motions', category: 'Frontend',
+    live: 'https://see-motions.vercel.app/',
+  },
+  {
+    id: 'civil-scroll', title: 'civil-scroll',
+    desc: 'A premium, award-style scroll-driven interactive experience that tells the story of a building being constructed from an empty plot of land into a fully completed industrial building.',
+    tech: ['TypeScript', 'React', 'Animations'],
+    color: '#f89820', icon: '🏢',
+    github: 'https://github.com/vignesh-s-001/civil-scroll', category: 'Frontend',
+    live: 'https://civil-scroll.vercel.app/',
+  },
+  {
+    id: 'domain-dora', title: 'Domain-Dora',
+    desc: 'A modern domain intelligence platform that provides comprehensive insights into domains, IP addresses, DNS records, and ASN information.',
+    tech: ['TypeScript', 'React', 'Node.js'],
+    color: '#2496ed', icon: '🔍',
+    github: 'https://github.com/vignesh-s-001/Domain-Dora', category: 'Full Stack',
+    live: 'https://domain-dora.vercel.app/',
+  },
+  {
+    id: 'fca', title: 'FCA (Enterprise Forecasting)',
+    desc: 'Enterprise-Grade Universal Forecasting Platform (Phase 1). It allows users to upload time-series datasets and run automated forecasts using machine learning models (powered by Prophet).',
+    tech: ['TypeScript', 'Python', 'Machine Learning'],
+    color: '#41b883', icon: '📈',
+    github: 'https://github.com/vignesh-s-001/FCA', category: 'Full Stack',
+  },
+  {
+    id: 'docgen', title: 'DocGen',
+    desc: 'Local-first AI document intelligence platform. Upload PDFs, extract content, and ask questions — all running 100% on your machine. No API keys, no cloud, no data leaving your computer.',
+    tech: ['TypeScript', 'AI', 'Local LLMs'],
+    color: '#9b59b6', icon: '📄',
+    github: 'https://github.com/vignesh-s-001/DocGen', category: 'Full Stack',
+  },
+  {
+    id: 'universal-scrapper', title: 'Universal-Scrapper',
+    desc: 'Production-ready AI-powered web scraper with 10 scrape modes, async job queue, role-based auth, and a stunning Next.js 15 dashboard. Built with FastAPI + Playwright + LLMs.',
+    tech: ['TypeScript', 'FastAPI', 'Playwright', 'LLMs'],
+    color: '#f05032', icon: '🕸️',
+    github: 'https://github.com/vignesh-s-001/Universal-Scrapper', category: 'Full Stack',
+  },
+  {
     id: 'mekark', title: 'Mekark',
     desc: 'A landing page for a construction company. Features a sleek, responsive design to showcase services, project portfolios, and company expertise, helping to drive client leads.',
     tech: ['React', 'Next.js', 'TailwindCSS'],
@@ -600,7 +652,7 @@ function App() {
 
                 <div className="about-stats">
                   <div className="stat-card">
-                    <span className="stat-num">1+</span>
+                    <span className="stat-num">2+</span>
                     <span className="stat-label">Yrs. Experience</span>
                   </div>
                   <div className="stat-card">
@@ -608,7 +660,7 @@ function App() {
                     <span className="stat-label">Products Worked</span>
                   </div>
                   <div className="stat-card">
-                    <span className="stat-num">10+</span>
+                    <span className="stat-num">15+</span>
                     <span className="stat-label">Personal Projects</span>
                   </div>
                   <div className="stat-card">
@@ -808,6 +860,13 @@ function App() {
                       <p className="contact-link-value">instagram.com/vignesh_____sankar</p>
                     </div>
                   </a>
+                  <a href="https://buymeacoffee.com/sun_god_vicky" target="_blank" rel="noreferrer" className="contact-link" id="contact-buymeacoffee">
+                    <div className="contact-link-icon" style={{ background: '#FFDD0022', color: '#FFDD00' }}>☕</div>
+                    <div>
+                      <p className="contact-link-label">Buy Me a Coffee</p>
+                      <p className="contact-link-value">buymeacoffee.com/sun_god_vicky</p>
+                    </div>
+                  </a>
                 </div>
               </div>
               <div className="contact-form-wrap">
@@ -970,6 +1029,8 @@ function App() {
             <a href="https://linkedin.com/in/vignesh-s001" target="_blank" rel="noreferrer">LinkedIn</a>
             &nbsp;·&nbsp;
             <a href="/resume.pdf" download>Resume</a>
+            &nbsp;·&nbsp;
+            <a href="https://buymeacoffee.com/sun_god_vicky" target="_blank" rel="noreferrer">Buy Me a Coffee ☕</a>
           </p>
         </footer>
 
