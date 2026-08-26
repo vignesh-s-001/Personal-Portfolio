@@ -950,10 +950,10 @@ function App() {
                 <div className="resume-section">
                   <h3 className="rs-title">🚀 Projects</h3>
                   <ul className="resume-list">
-                    <li><strong>GMart E-Commerce</strong> — React frontend with product listing, cart &amp; checkout, backend API integration</li>
-                    <li><strong>Real-Time Chat App</strong> — MERN stack + WebSockets for instant messaging</li>
-                    <li><strong>Art Gallery Site</strong> — Immersive creative showcase with animations</li>
-                    <li><strong>Instagram UI Clone</strong> — Pixel-perfect frontend recreation</li>
+                    <li><strong>Black-Scope</strong> — Production-quality frontend observability and monitoring platform (Turborepo, TypeScript)</li>
+                    <li><strong>Universal-Scrapper</strong> — AI-powered web scraper with 10 scrape modes, async job queue, and Next.js dashboard</li>
+                    <li><strong>Domain-Dora</strong> — Modern domain intelligence platform for DNS and ASN insights (Node.js, React)</li>
+                    <li><strong>FCA</strong> — Enterprise-grade universal forecasting platform with machine learning integration</li>
                   </ul>
                 </div>
               </div>
