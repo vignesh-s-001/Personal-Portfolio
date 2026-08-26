@@ -633,7 +633,7 @@ function App() {
                   I'm a Software Engineer with 1+ year of professional experience. Most recently at <em>Namlabs</em>, I built and maintained scalable SaaS products including an <em>Observability Platform</em> and a <em>GRC (Governance, Risk & Compliance)</em> platform. I've worked across backend services (Node.js, Go), real-time data pipelines (ClickHouse, Redis), and cloud integrations (AWS & Azure).
                 </p>
                 <p className="about-desc">
-                  I've also contributed to multiple key products at Namlabs: <em>AtaUs</em>, <em>Klogic</em>, <em>Lowerplane</em>, and <em>MagicDemo</em> — spanning domains from infrastructure observability to business logic automation. I thrive in fast-moving product teams where backend reliability and user-facing quality both matter.
+                  I've also contributed to multiple key products at Namlabs: <em>Namlabs</em>, <em>Klogic</em>, <em>Lowerplane</em>, and <em>MagicDemo</em> — spanning domains from infrastructure observability to business logic automation. I thrive in fast-moving product teams where backend reliability and user-facing quality both matter.
                 </p>
                 <p>
                   I'm a 2023 CS graduate from Anna University (8.19 CGPA). Outside of work, I build personal projects — real-time chat apps, e-commerce platforms, art galleries, UI clones — always learning, always shipping.
